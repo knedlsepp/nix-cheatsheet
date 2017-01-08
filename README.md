@@ -1,6 +1,13 @@
 # nix-cheatsheet
 I use this repository as a reference for the `nix` commands, which I use most frequently.
 
+- [📖 nix manual](https://nixos.org/nixpkgs/manual/)
+- [📖 nixpkgs manual](https://nixos.org/nixpkgs/manual/)
+- [📖 nixOS manual](https://nixos.org/nixos/manual/)
+- [📖 nixops manual](https://nixos.org/nixops/manual/)
+
+- [🏗 hydra CI server](https://hydra.nixos.org/jobset/nixpkgs/trunk)
+
 - [⚙ Development environments](examples/nix-shell/README.md)
 - [😭 Resolving problems](docs/resolving-problems.md)
 

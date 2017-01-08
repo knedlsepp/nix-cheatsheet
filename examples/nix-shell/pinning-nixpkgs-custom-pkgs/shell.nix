@@ -21,17 +21,9 @@ let
     };
   };
 in with pkgs; stdenv.mkDerivation rec {
-  shellHook = ''
-    export PS1="\n\[\033[1;32m\][${name}-shell:\w]$\[\033[0m\] "
-  '';
   name = "some-python-project";
   src = ./.;
   buildInputs = [ stdenv
-                  pythonPackages.jupyter
-                  pythonPackages.matplotlib
-                  #pythonPackages.opencv
-                  pythonPackages.ipyparallel
-                  pythonPackages.netcdf4
                   pythonPackages.numpy
                   pythonPackages.pandas
                   my_pythonPackages.pint
