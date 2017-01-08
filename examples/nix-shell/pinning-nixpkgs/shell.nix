@@ -1,3 +1,4 @@
+
 {nixpkgs ? null}:
 let
   pinnedPkg = (import <nixpkgs> {}).fetchFromGitHub {
@@ -14,10 +15,11 @@ in with pkgs; stdenv.mkDerivation rec {
   name = "some-python-project";
   src = ./.;
   buildInputs = [ stdenv
-                  pythonPackages.jupyter
-                  pythonPackages.netcdf4
+                  #pythonPackages.jupyter
+                  #pythonPackages.netcdf4
                   pythonPackages.numpy
-                  pythonPackages.pandas
+                  pythonPackages.ipython
+                  #pythonPackages.pandas
   ];
 
 }
