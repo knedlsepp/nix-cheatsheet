@@ -1,4 +1,8 @@
-
+# To get the pinned nixpkgs simply use:
+#   nix-shell
+# If you want to use a different nixpkgs version use:
+#   export NIX_PATH=my-nixpkgs=$HOME/my-fork:$NIX_PATH
+#   nix-shell --arg nixpkgs "<my-nixpkgs>"
 {nixpkgs ? null}:
 let
   pinnedPkg = (import <nixpkgs> {}).fetchFromGitHub {
@@ -15,12 +19,8 @@ in with pkgs; stdenv.mkDerivation rec {
   name = "some-python-project";
   src = ./.;
   buildInputs = [ stdenv
-                  #pythonPackages.jupyter
-                  #pythonPackages.netcdf4
                   pythonPackages.numpy
                   pythonPackages.ipython
-                  #pythonPackages.pandas
   ];
-
 }
 
