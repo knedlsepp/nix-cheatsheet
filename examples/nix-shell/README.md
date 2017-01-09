@@ -13,7 +13,7 @@ In a directory, which contains a `shell.nix` file, simply run:
 ```bash
 nix-shell 
 ```
-
+- Here is a [simple example](simple-example/shell.nix)
 - Pin a nixpkgs version [like this](pinning-nixpkgs/shell.nix)
 - Define packages not in the official repository [like this](pinning-nixpkgs-custom-pkgs/shell.nix)
 
