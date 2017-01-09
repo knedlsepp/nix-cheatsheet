@@ -19,3 +19,4 @@ I use this repository as a reference for the `nix` commands, which I use most of
 - [📖 nixOS manual](https://nixos.org/nixos/manual/)
 - [📖 nixops manual](https://nixos.org/nixops/manual/)
 - [🏗 hydra CI server](https://hydra.nixos.org/jobset/nixpkgs/trunk)
+- [👨‍🏫 Introductory talk by fpletz@froscon2016](http://slides.com/fpletz/nixos-froscon2016)
