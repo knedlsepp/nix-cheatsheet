@@ -1,6 +1,8 @@
 # To get the pinned nixpkgs simply use:
 #   nix-shell
 # If you want to use a different nixpkgs version use:
+#   export NIX_PATH=nixpkgs-1509=https://github.com/NixOS/nixpkgs-channels/archive/nixos-15.09.tar.gz:$NIX_PATH
+#   nix-shell --arg nixpkgs "<nixpkgs-1509>"
 #   export NIX_PATH=my-nixpkgs=$HOME/my-fork:$NIX_PATH
 #   nix-shell --arg nixpkgs "<my-nixpkgs>"
 {nixpkgs ? null}:

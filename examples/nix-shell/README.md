@@ -1,18 +1,24 @@
-### Starting shells with `--packages`
+### Starting shells with `--packages` (or `-p`)
 ```bash
-nix-shell --packages git catclock
+nix-shell --packages git
+nix-shell --packages pythonPackages.ipython pythonPackages.numpy
 ```
-
 ### List which packages are availabe
 ```bash
 nix-env -qaP
 ```
 
 ### Starting shells with a `shell.nix` file
+In a directory, which contains a `shell.nix` file, simply run:
 ```bash
-# In a directory, which contains a `shell.nix` file, simply run:
 nix-shell 
 ```
+
+- Pin a nixpkgs version [like this](pinning-nixpkgs/shell.nix)
+- Define packages not in the official repository [like this](pinning-nixpkgs-custom-pkgs/shell.nix)
+
+You can find other examples of files [here](./):
+
 
 ### Starting a pure shell via `--pure`
 To get a shell cleaned from all environment variables use:
@@ -26,8 +32,11 @@ nix-shell --pure
 nix-shell -p atom --run "atom"
 ```
 
-Write something important to the terminal
 ```bash
-nix-shell --pure -p ponysay --run "ponysay 'This is great.'"
+nix-shell --pure -p pythonPackages.jupyter pythonPackages.numpy --run jupyter-notebook
+```
+
+```bash
+nix-shell -p ponysay --run "ponysay 'This is great.'"
 ```
 
