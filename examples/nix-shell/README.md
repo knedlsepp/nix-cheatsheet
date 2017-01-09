@@ -14,6 +14,7 @@ In a directory, which contains a `shell.nix` file, simply run:
 nix-shell 
 ```
 - Here is a [simple example](simple-example/shell.nix)
+- A [C++ Cmake example](simple-cxx-stuff/shell.nix)
 - Pin a nixpkgs version [like this](pinning-nixpkgs/shell.nix)
 - Define packages not in the official repository [like this](pinning-nixpkgs-custom-pkgs/shell.nix)
 
