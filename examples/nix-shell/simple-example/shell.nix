@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs> {} }:
 
 with pkgs;
-stdenv.mkDerivation {
+stdenv.mkDerivation rec {
   name = "simple";
 
   buildInputs = [ git
