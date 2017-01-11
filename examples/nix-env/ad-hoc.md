@@ -36,3 +36,9 @@ Update everything
 ```bash
 nix-env -u --keep-going --leq
 ```
+
+### Show dependencies
+```bash
+nix-store --query --references\
+  $(nix-instantiate '<nixpkgs>' -A emacs)
+```

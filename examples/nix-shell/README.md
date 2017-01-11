@@ -41,3 +41,11 @@ nix-shell --pure -p pythonPackages.jupyter pythonPackages.numpy --run jupyter-no
 nix-shell -p ponysay --run "ponysay 'This is great.'"
 ```
 
+### Keep a nix-shell from being garbage collected
+To make a nix-shell persistent and avoid it being garbage collected do the following:
+
+```bash
+cd <YOURPROJECT>
+mkdir gcroots
+nix-shell ./shell.nix --pure --indirect --add-root gcroots/dep
+```
