@@ -17,6 +17,7 @@ nix-shell
 - A [C++ Cmake example](simple-cxx-stuff/shell.nix)
 - Pin a nixpkgs version [like this](pinning-nixpkgs/shell.nix)
 - Define packages not in the official repository [like this](pinning-nixpkgs-custom-pkgs/shell.nix)
+- Override (python-)package versions already in the official repository [like this](override-python-package-version/shell.nix)
 
 You can find other examples of files [here](./):
 
