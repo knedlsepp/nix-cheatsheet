@@ -2,7 +2,7 @@
 with pkgs;
 stdenv.mkDerivation rec {
   name = "saphir";
-  src = ./.;
+  src = if lib.inNixShell then null else ./.; # Avoid copying of src dir when using nix-shell
   buildInputs = [ stdenv
                 # Actual dependencies
                   armadillo

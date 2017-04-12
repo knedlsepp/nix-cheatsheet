@@ -12,7 +12,7 @@ let
            import nixpkgs {};
 in with pkgs; stdenv.mkDerivation rec {
   name = "bebenmeldung";
-  src = ./.;
+  src = if lib.inNixShell then null else ./.; # Avoid copying of src dir when using nix-shell
   buildInputs = [ stdenv
                   php70Packages.composer
   ];

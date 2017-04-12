@@ -107,7 +107,7 @@ in with pkgs; with not_yet_in_nixpkgs; stdenv.mkDerivation rec {
     export PS1="\n\[\033[1;32m\][${name}-shell:\w]$\[\033[0m\] "
   '';
   name = "climvis";
-  src = ./.;
+  src = if lib.inNixShell then null else ./.; # Avoid copying of src dir when using nix-shell
   buildInputs = [ stdenv
                 # Dependencies which are not yet in nixpkgs
                   flask-restful

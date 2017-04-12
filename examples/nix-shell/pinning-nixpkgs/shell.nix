@@ -19,7 +19,7 @@ let
            import <nixpkgs> {};
 in with pkgs; stdenv.mkDerivation rec {
   name = "some-python-project";
-  src = ./.;
+  src = if lib.inNixShell then null else ./.; # Avoid copying of src dir when using nix-shell
   buildInputs = [ stdenv
                   pythonPackages.numpy
                   pythonPackages.ipython
