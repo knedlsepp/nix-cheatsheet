@@ -3,7 +3,7 @@
 nix-shell --packages git
 nix-shell --packages pythonPackages.ipython pythonPackages.numpy
 ```
-### List which packages are availabe
+### List which packages are available
 ```bash
 nix-env -qaP
 ```
